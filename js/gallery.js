@@ -100,9 +100,11 @@ function openModalClick(event) {
     {
       onShow: () => {
         document.addEventListener("keydown", closeImage);
+        document.body.style.overflow = 'hidden'
       },
-      onclose: () => {
+      onClose: () => {
         document.removeEventListener("keydown", closeImage);
+        document.body.style.overflow = 'visible'
       },
     }
   );
